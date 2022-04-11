@@ -1,7 +1,6 @@
 package ru.nsk.suvorov.numbers.app
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
@@ -10,9 +9,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import dagger.android.support.DaggerAppCompatActivity
 import ru.nsk.suvorov.numbers.app.ui.theme.NumbersTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -37,7 +37,7 @@ fun Greeting(name: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    NumbersTheme {
+    NumbersTheme(darkTheme = true) {
         Greeting("Android")
     }
 }
