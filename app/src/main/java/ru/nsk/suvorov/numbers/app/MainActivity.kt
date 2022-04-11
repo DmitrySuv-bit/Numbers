@@ -13,31 +13,32 @@ import dagger.android.support.DaggerAppCompatActivity
 import ru.nsk.suvorov.numbers.app.ui.theme.NumbersTheme
 
 class MainActivity : DaggerAppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            NumbersTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContent {
+			NumbersTheme {
+				// A surface container using the 'background' color from the theme
+				Surface(
+					modifier = Modifier.fillMaxSize(),
+					color = MaterialTheme.colors.background
+				) {
+					Greeting("Android")
+				}
+			}
+		}
+	}
 }
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+	Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    NumbersTheme(darkTheme = true) {
-        Greeting("Android")
-    }
+	NumbersTheme(darkTheme = true) {
+		Greeting("Android")
+	}
 }

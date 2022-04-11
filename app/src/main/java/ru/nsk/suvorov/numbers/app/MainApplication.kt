@@ -6,8 +6,8 @@ import ru.nsk.suvorov.numbers.di.DaggerAppComponent
 
 class MainApplication : DaggerApplication() {
 
-    override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
-        DaggerAppComponent
-            .factory()
-            .create(this)
+	override fun applicationInjector(): AndroidInjector<out DaggerApplication> =
+		DaggerAppComponent
+			.factory()
+			.create(this)
 }

@@ -7,13 +7,13 @@ import ru.nsk.suvorov.numbers.feature.numberfact.domain.repository.NumberFactRep
 import javax.inject.Inject
 
 class NumberFactRepositoryImpl @Inject constructor(
-    private val dataSource: NumberFactDataSource,
-    private val numberFactModelConverter: NumberFactModelConverter,
+	private val dataSource: NumberFactDataSource,
+	private val numberFactModelConverter: NumberFactModelConverter,
 ) : NumberFactRepository {
 
-    override suspend fun getNumberFact(): NumberFact {
-        val numberFactModel = dataSource.getNumberFact()
+	override suspend fun getNumberFact(): NumberFact {
+		val numberFactModel = dataSource.getNumberFact()
 
-        return numberFactModelConverter.convert(numberFactModel)
-    }
+		return numberFactModelConverter.convert(numberFactModel)
+	}
 }

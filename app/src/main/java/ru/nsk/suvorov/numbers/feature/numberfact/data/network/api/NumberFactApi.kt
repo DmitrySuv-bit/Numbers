@@ -5,6 +5,6 @@ import ru.nsk.suvorov.numbers.feature.numberfact.data.network.model.NumberFactMo
 
 interface NumberFactApi {
 
-    @GET("random/math?json")
-    suspend fun getNumberFact(): NumberFactModel
+	@GET("random/math?json")
+	suspend fun getNumberFact(): NumberFactModel
 }

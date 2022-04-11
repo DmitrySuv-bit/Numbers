@@ -6,13 +6,13 @@ import javax.inject.Inject
 
 interface NumberFactDataSource {
 
-    suspend fun getNumberFact(): NumberFactModel
+	suspend fun getNumberFact(): NumberFactModel
 }
 
 class NumberFactDataSourceImpl @Inject constructor(
-    private val numberFactApi: NumberFactApi,
+	private val numberFactApi: NumberFactApi,
 ) : NumberFactDataSource {
 
-    override suspend fun getNumberFact(): NumberFactModel =
-        numberFactApi.getNumberFact()
+	override suspend fun getNumberFact(): NumberFactModel =
+		numberFactApi.getNumberFact()
 }

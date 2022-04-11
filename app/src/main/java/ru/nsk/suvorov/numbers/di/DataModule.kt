@@ -4,6 +4,6 @@ import dagger.Module
 import ru.nsk.suvorov.numbers.feature.numberfact.di.NumberFactDataModule
 
 @Module(includes = [
-    NumberFactDataModule::class,
+	NumberFactDataModule::class,
 ])
 interface DataModule

@@ -6,10 +6,10 @@ import javax.inject.Inject
 
 class NumberFactModelConverter @Inject constructor() {
 
-    fun convert(from: NumberFactModel): NumberFact =
-        NumberFact(
-            text = from.text,
-            found = from.found,
-            number = from.number
-        )
+	fun convert(from: NumberFactModel): NumberFact =
+		NumberFact(
+			text = from.text,
+			found = from.found,
+			number = from.number
+		)
 }

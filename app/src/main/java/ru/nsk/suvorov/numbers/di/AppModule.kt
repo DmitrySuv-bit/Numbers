@@ -10,21 +10,21 @@ import ru.nsk.suvorov.numbers.data.network.di.NetworkModule
 import ru.nsk.suvorov.numbers.di.scope.AppScope
 
 @Module(
-    includes = [
-        AndroidInjectionModule::class,
+	includes = [
+		AndroidInjectionModule::class,
 
-        NetworkModule::class,
-        DataModule::class,
-        ActivityModule::class
-    ]
+		NetworkModule::class,
+		DataModule::class,
+		ActivityModule::class
+	]
 )
 interface AppModule {
 
-    @Binds
-    @AppScope
-    fun bindContext(app: MainApplication): Context
+	@Binds
+	@AppScope
+	fun bindContext(app: MainApplication): Context
 
-    @Binds
-    @AppScope
-    fun bindApplication(app: MainApplication): Application
+	@Binds
+	@AppScope
+	fun bindApplication(app: MainApplication): Application
 }

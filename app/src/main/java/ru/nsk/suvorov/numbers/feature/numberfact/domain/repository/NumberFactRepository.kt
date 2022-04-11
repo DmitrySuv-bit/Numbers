@@ -4,5 +4,5 @@ import ru.nsk.suvorov.numbers.feature.numberfact.domain.model.NumberFact
 
 interface NumberFactRepository {
 
-    suspend fun getNumberFact(): NumberFact
+	suspend fun getNumberFact(): NumberFact
 }

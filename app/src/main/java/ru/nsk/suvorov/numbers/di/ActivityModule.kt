@@ -8,9 +8,9 @@ import ru.nsk.suvorov.numbers.di.scope.ActivityScope
 @Module
 interface ActivityModule {
 
-    @ActivityScope
-    @ContributesAndroidInjector(modules = [
-            PresentationModule::class
-        ])
-    fun mainActivityInjector(): MainActivity
+	@ActivityScope
+	@ContributesAndroidInjector(modules = [
+		PresentationModule::class
+	])
+	fun mainActivityInjector(): MainActivity
 }

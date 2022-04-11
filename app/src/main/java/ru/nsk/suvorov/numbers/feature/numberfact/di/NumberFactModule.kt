@@ -13,21 +13,21 @@ import ru.nsk.suvorov.numbers.feature.numberfact.data.repository.NumberFactRepos
 import ru.nsk.suvorov.numbers.feature.numberfact.domain.repository.NumberFactRepository
 
 @Module
-interface NumberFactDataModule{
+interface NumberFactDataModule {
 
-    companion object {
+	companion object {
 
-        @Provides
-        @AppScope
-        fun provideNumberFactApi(retrofit: Retrofit): NumberFactApi =
-            retrofit.create(NumberFactApi::class.java)
-    }
+		@Provides
+		@AppScope
+		fun provideNumberFactApi(retrofit: Retrofit): NumberFactApi =
+			retrofit.create(NumberFactApi::class.java)
+	}
 
-    @Binds
-    @Reusable
-    fun bindNumberFactDataSource(numberFactDataSourceImpl: NumberFactDataSourceImpl): NumberFactDataSource
+	@Binds
+	@Reusable
+	fun bindNumberFactDataSource(numberFactDataSourceImpl: NumberFactDataSourceImpl): NumberFactDataSource
 
-    @Binds
-    @Reusable
-    fun bindNumberFactRepository(numbersRepositoryImpl: NumberFactRepositoryImpl): NumberFactRepository
+	@Binds
+	@Reusable
+	fun bindNumberFactRepository(numbersRepositoryImpl: NumberFactRepositoryImpl): NumberFactRepository
 }
